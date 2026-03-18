@@ -1,0 +1,26 @@
+services:
+  web:
+    build: .
+    # image: nixos/nix:2.34.1
+    command: pnpm dev
+    # command: /home/nixuser/nix-portable nix develop --command bash -c "pnpm dev"
+    # command: nix run --extra-experimental-features "nix-command flakes" nixpkgs#hello
+    # command: whoami
+    user: 1000:1000
+    # user: nixuser
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ./nix-portable:/home/nixuser/.nix-portable
+    #   - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+    # depends_on:
+      # - postgres
+  #   environment:
+  #     DATABASE_URL: postgres://todoapp@postgres/todos
+  # postgres:
+  #   image: postgres:9.6.2-alpine
+  #   environment:
+  #     POSTGRES_USER: todoapp
+  #     POSTGRES_DB: todos

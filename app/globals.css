@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next VF";
+  src: url("/atkinson_hyperlegible.woff2")
+    format("woff2");
+}
+
+@keyframes worm {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.animate-pause:hover * {
+  animation-play-state: paused;
+}
+
+.bg-rainbow-on {
+  background-image: conic-gradient(
+    from var(--angle),
+    red,
+    yellow,
+    lime,
+    aqua,
+    blue,
+    magenta,
+    red
+  );
+  animation: 10s rainbow-rotate linear infinite;
+}
+
+.bg-rainbow:hover {
+  background-image: conic-gradient(
+    from var(--angle),
+    red,
+    yellow,
+    lime,
+    aqua,
+    blue,
+    magenta,
+    red
+  );
+  animation: 10s rainbow-rotate linear infinite;
+}
+
+@keyframes rainbow-rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@theme {
+  /* Default Background */
+  --color-base00: var(--color-base00);
+
+  /* Lighter Background (Used for status bars) */
+  --color-base01: var(--color-base01);
+
+  /* Selection Background */
+  --color-base02: var(--color-base02);
+
+  /* Comments, Invisibles, Line Highlighting */
+  --color-base03: var(--color-base03);
+
+  /* Dark Foreground (Used for status bars) */
+  --color-base04: var(--color-base04);
+
+  /* Default Foreground, Caret, Delimiters, Operators */
+  --color-base05: var(--color-base05);
+
+  /* Light Foreground */
+  --color-base06: var(--color-base06);
+
+  /* The Lightest Foreground */
+  --color-base07: var(--color-base07);
+
+  /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
+  --color-base08: var(--color-base08);
+
+  /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
+  --color-base09: var(--color-base09);
+
+  /* Classes, Markup Bold, Search Text Background */
+  --color-base0A: var(--color-base0A);
+
+  /* Strings, Inherited Class, Markup Code, Diff Inserted */
+  --color-base0B: var(--color-base0B);
+
+  /* Support, Regular Expressions, Escape Characters, Markup Quotes */
+  --color-base0C: var(--color-base0C);
+
+  /* Functions, Methods, Attribute IDs, Headings */
+  --color-base0D: var(--color-base0D);
+
+  /* Keywords, Storage, Selector, Markup Italic, Diff Changed */
+  --color-base0E: var(--color-base0E);
+
+  /* Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?> */
+  --color-base0F: var(--color-base0F);
+
+  --font-hi: "Atkinson Hyperlegible Next VF", sans-serif;
+  --animate-worm: worm 20s linear infinite;
+}
+
+/* --color-rainbow: conic-gradient( */
+/*   from var(--angle), */
+/*   red, */
+/*   yellow, */
+/*   lime, */
+/*   aqua, */
+/*   blue, */
+/*   magenta, */
+/*   red */
+/* ); */
+
+.theme_catppuccin_latte {
+  --color-base00: #eff1f5;
+  --color-base01: #e6e9ef;
+  --color-base02: #ccd0da;
+  --color-base03: #bcc0cc;
+  --color-base04: #acb0be;
+  --color-base05: #4c4f69;
+  --color-base06: #dc8a78;
+  --color-base07: #7287fd;
+  --color-base08: #d20f39;
+  --color-base09: #fe640b;
+  --color-base0A: #df8e1d;
+  --color-base0B: #40a02b;
+  --color-base0C: #179299;
+  --color-base0D: #1e66f5;
+  --color-base0E: #8839ef;
+  --color-base0F: #dd7878;
+}
+
+.theme_catppuccin_frappe {
+  --color-base00: #303446;
+  --color-base01: #292c3c;
+  --color-base02: #414559;
+  --color-base03: #51576d;
+  --color-base04: #626880;
+  --color-base05: #c6d0f5;
+  --color-base06: #f2d5cf;
+  --color-base07: #babbf1;
+  --color-base08: #e78284;
+  --color-base09: #ef9f76;
+  --color-base0A: #e5c890;
+  --color-base0B: #a6d189;
+  --color-base0C: #81c8be;
+  --color-base0D: #8caaee;
+  --color-base0E: #ca9ee6;
+  --color-base0F: #eebebe;
+}
