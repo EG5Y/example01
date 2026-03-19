@@ -10,7 +10,6 @@ export default function Home() {
   let search_tab1 = search.get("tab1");
   let [nav_toggle, set_nav_toggle] = useState(false);
 
-  // TODO CHANGE FONT FILE NAME
   return (
     <div className="theme_catppuccin_latte min-w-screen bg-base00">
       <main
