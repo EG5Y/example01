@@ -3,7 +3,7 @@ import withRspack from "next-rspack";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/example01/",
+  basePath: "/example01",
   /* config options here */
 };
 
