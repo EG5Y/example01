@@ -3,7 +3,7 @@ import withRspack from "next-rspack";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "https://eg5y.github.io/example01/",
+  basePath: "/example01/",
   /* config options here */
 };
 
