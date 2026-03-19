@@ -48,7 +48,7 @@ export default function Home() {
                   onClick={() => set_nav_toggle(!nav_toggle)}
                 >
                   <Image
-                    src="/burger_menu.svg"
+                    src="/example01/burger_menu.svg"
                     alt="arrow_down"
                     width={32}
                     height={32}
@@ -428,7 +428,7 @@ function NavItem({
         className="cursor-pointer font-[600] flex gap-2"
       >
         {text}
-        <Image src="/arrow_down.svg" alt="arrow_down" width={16} height={16} />
+        <Image src="/example01/arrow_down.svg" alt="arrow_down" width={16} height={16} />
       </button>
       <div
         className={
